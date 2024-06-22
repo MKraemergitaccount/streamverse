@@ -8,7 +8,7 @@ def connect_to_database():
     try:
         conn = mariadb.connect(
             user="streamverse_scraper",
-            password="Duhima32habi&",
+            password="[Password]",
             host="127.0.0.1",
             port=3306,
             database="scraper_db"
@@ -32,15 +32,7 @@ def get_from_database(cur,id):
     except mariadb.Error as e:
         print(f"Error reading Data: {e}")
 
-"""
-def write_to_database(conn, cur, service, title, image, year ,updated):
-    try:
-        cur.execute("INSERT INTO website_data  (service, title, image, year, updated) VALUES (?, ?, ?, ?, ?)",
-                    (service, title, image, year, updated))
-        conn.commit()
-    except mariadb.Error as e:
-        print(f"Error writing Data: {e}")
-"""
+
 
 def write_to_database(conn, cur, service, title, image, year ,updated):
     try:
